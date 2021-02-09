@@ -181,7 +181,9 @@ const TDEE = (gender, age, height, weight, activity) => {
 // ! Macros calculator all in grams
 const macros = (gender, age, height, weight, activity, goal) => {
   // ! get calorie needs
-  const calories = calorieNeeds(gender, age, height, weight, activity)[goal];
+  const calories = calorieNeeds(gender, age, height, weight, activity)[
+    goal.toLowerCase()
+  ];
   // ! as per the goal, give 5 diet plans ==> balanced, low-carb, high-carb, high-protein, low-fat
   const balancedDietPlan = {
     carb: roundToTwoDecimal((0.4 * calories) / 4),

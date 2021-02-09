@@ -12,7 +12,13 @@
     "macros",
     "calorie",
     "diet",
-    "calculator"
+    "calculator",
+    "bmr",
+    "bmi",
+    "nutrition",
+    "diet-planning",
+    "alcohol-content",
+    "alcohol"
   ],
   "author": "Manas Tripathi",
   "license": "ISC"
