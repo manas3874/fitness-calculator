@@ -1,0 +1,18 @@
+{
+  "name": "fitness-calculator",
+  "version": "1.0.0",
+  "description": "This is a package which will help you perform calculations for your calorie needs, total daily energy expenditure, macros and much more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fitness",
+    "macros",
+    "calorie",
+    "diet",
+    "calculator"
+  ],
+  "author": "Manas Tripathi",
+  "license": "ISC"
+}
