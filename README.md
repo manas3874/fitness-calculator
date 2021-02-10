@@ -1,6 +1,8 @@
 # Fitness calculators for all your needs
 ### This is a package which will help you perform calculations for your BMI, BMR, calorie needs, total daily energy expenditure, macros and much more
 
+> ## MIT Licence
+
 ## **Usage**
 
 1. Install the package using `npm i fitness-calculator`
@@ -163,4 +165,5 @@ console.log(`I will eat less than${myCalorieNeeds} to cut down my fat.`)
 
 ## Please raise github issues for improvements/ suggestions/ fixes/ feature requests/ collaboration.
 
-## [Source code on github](https://github.com/manas3874/fitness-calculator)
+## [Source code on github](https://github.com/manas3874/fitness-calculator) 
+[MIT Licence](https://opensource.org/licenses/MIT)
