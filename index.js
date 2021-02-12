@@ -172,6 +172,8 @@ const calorieNeeds = (gender, age, height, weight, activity) => {
     return error;
   }
 };
+
+// console.log(calorieNeeds("male", 22, 176, 73, "active"));
 // ! *********************************************************************************************
 // ! TDEE calculator
 const TDEE = (gender, age, height, weight, activity) => {
@@ -181,45 +183,44 @@ const TDEE = (gender, age, height, weight, activity) => {
 // ! Macros calculator all in grams
 const macros = (gender, age, height, weight, activity, goal) => {
   // ! get calorie needs
-  const calories = calorieNeeds(gender, age, height, weight, activity)[
-    goal.toLowerCase()
-  ];
+  const calories = calorieNeeds(gender, age, height, weight, activity);
+  // console.log(calories[goal]);
   // ! as per the goal, give 5 diet plans ==> balanced, low-carb, high-carb, high-protein, low-fat
   const balancedDietPlan = {
-    carb: roundToTwoDecimal((0.4 * calories) / 4),
-    protein: roundToTwoDecimal((0.3 * calories) / 4),
-    fat: roundToTwoDecimal((0.3 * calories) / 9),
-    sugar: roundToTwoDecimal((0.1 * calories) / 4),
+    carb: roundToTwoDecimal((0.4 * calories[goal]) / 4),
+    protein: roundToTwoDecimal((0.3 * calories[goal]) / 4),
+    fat: roundToTwoDecimal((0.3 * calories[goal]) / 9),
+    sugar: roundToTwoDecimal((0.1 * calories[goal]) / 4),
   };
   const lowCarbDietPlan = {
-    carb: roundToTwoDecimal((0.3 * calories) / 4),
-    protein: roundToTwoDecimal((0.4 * calories) / 4),
-    fat: roundToTwoDecimal((0.3 * calories) / 9),
-    sugar: roundToTwoDecimal((0.1 * calories) / 4),
+    carb: roundToTwoDecimal((0.3 * calories[goal]) / 4),
+    protein: roundToTwoDecimal((0.4 * calories[goal]) / 4),
+    fat: roundToTwoDecimal((0.3 * calories[goal]) / 9),
+    sugar: roundToTwoDecimal((0.1 * calories[goal]) / 4),
   };
   const highCarbDietPlan = {
-    carb: roundToTwoDecimal((0.5 * calories) / 4),
-    protein: roundToTwoDecimal((0.3 * calories) / 4),
-    fat: roundToTwoDecimal((0.2 * calories) / 9),
-    sugar: roundToTwoDecimal((0.1 * calories) / 4),
+    carb: roundToTwoDecimal((0.5 * calories[goal]) / 4),
+    protein: roundToTwoDecimal((0.3 * calories[goal]) / 4),
+    fat: roundToTwoDecimal((0.2 * calories[goal]) / 9),
+    sugar: roundToTwoDecimal((0.1 * calories[goal]) / 4),
   };
   const highProteinDietPlan = {
-    carb: roundToTwoDecimal((0.35 * calories) / 4),
-    protein: roundToTwoDecimal((0.45 * calories) / 4),
-    fat: roundToTwoDecimal((0.2 * calories) / 9),
-    sugar: roundToTwoDecimal((0.1 * calories) / 4),
+    carb: roundToTwoDecimal((0.35 * calories[goal]) / 4),
+    protein: roundToTwoDecimal((0.45 * calories[goal]) / 4),
+    fat: roundToTwoDecimal((0.2 * calories[goal]) / 9),
+    sugar: roundToTwoDecimal((0.1 * calories[goal]) / 4),
   };
   const lowFatDietPlan = {
-    carb: roundToTwoDecimal((0.45 * calories) / 4),
-    protein: roundToTwoDecimal((0.4 * calories) / 4),
-    fat: roundToTwoDecimal((0.15 * calories) / 9),
-    sugar: roundToTwoDecimal((0.1 * calories) / 4),
+    carb: roundToTwoDecimal((0.45 * calories[goal]) / 4),
+    protein: roundToTwoDecimal((0.4 * calories[goal]) / 4),
+    fat: roundToTwoDecimal((0.15 * calories[goal]) / 9),
+    sugar: roundToTwoDecimal((0.1 * calories[goal]) / 4),
   };
   const lowSugarDietPlan = {
-    carb: roundToTwoDecimal((0.4 * calories) / 4),
-    protein: roundToTwoDecimal((0.4 * calories) / 4),
-    fat: roundToTwoDecimal((0.2 * calories) / 9),
-    sugar: roundToTwoDecimal((0.05 * calories) / 4),
+    carb: roundToTwoDecimal((0.4 * calories[goal]) / 4),
+    protein: roundToTwoDecimal((0.4 * calories[goal]) / 4),
+    fat: roundToTwoDecimal((0.2 * calories[goal]) / 9),
+    sugar: roundToTwoDecimal((0.05 * calories[goal]) / 4),
   };
   return {
     balancedDietPlan,
@@ -230,7 +231,7 @@ const macros = (gender, age, height, weight, activity, goal) => {
     lowSugarDietPlan,
   };
 };
-// console.log(macros("male", 22, 176, 73, "moderate", "mildWeightLoss"));
+console.log(macros("male", 22, 176, 73, "active", "mildWeightLoss"));
 
 // ! Body alcohol content calculator (weight,time,{beer:amount,wine:amount,liquor:amount,other:[amount,strength]})
 const BAC = (gender, weight, timeSinceLastDrink, consumptionData) => {
