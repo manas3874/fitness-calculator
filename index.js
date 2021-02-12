@@ -231,7 +231,7 @@ const macros = (gender, age, height, weight, activity, goal) => {
     lowSugarDietPlan,
   };
 };
-console.log(macros("male", 22, 176, 73, "active", "mildWeightLoss"));
+// console.log(macros("male", 22, 176, 73, "active", "mildWeightLoss"));
 
 // ! Body alcohol content calculator (weight,time,{beer:amount,wine:amount,liquor:amount,other:[amount,strength]})
 const BAC = (gender, weight, timeSinceLastDrink, consumptionData) => {

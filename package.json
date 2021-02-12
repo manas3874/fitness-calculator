@@ -1,6 +1,6 @@
 {
   "name": "fitness-calculator",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "This is a package which will help you perform calculations for your calorie needs, total daily energy expenditure, macros and much more",
   "main": "index.js",
   "github": "https://github.com/manas3874/fitness-calculator",
