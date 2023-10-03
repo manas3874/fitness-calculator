@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/manas3874/fitness-calculator/blob/master/LICENSE)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source/Yes%21/blue?icon=github)](https://github.com/manas3874/fitness-calculator)
 [![Maintenance](https://img.shields.io/badge/Maintained-Yes!-green.svg)](https://github.com/manas3874/fitness-calculator/commits/master)
-[![GitHub stars](https://img.shields.io/github/stars/fitness-calculator.svg?style=social&label=Star)](https://GitHub.com/manas3874/fitness-calculator/)
+[![GitHub stars](https://img.shields.io/github/stars/manas3874/fitness-calculator.svg?style=social&label=Star)](https://GitHub.com/manas3874/fitness-calculator/)
 
 
 # Fitness calculators for all your needs
